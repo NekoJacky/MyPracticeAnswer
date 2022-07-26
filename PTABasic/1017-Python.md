@@ -19,7 +19,9 @@
     17636684150141093474 3
 代码
 
-    a,b = map(int,input().split())
-    c = a // b
-    d = a % b
-    print("{} {}".format(c,d))
+```Python
+a,b = map(int,input().split())
+c = a // b
+d = a % b
+print("{} {}".format(c,d))
+```
