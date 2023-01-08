@@ -30,7 +30,9 @@ s 由英文字母、数字、符号和空格组成
 链接：https://leetcode.cn/problems/longest-substring-without-repeating-characters
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-# 麻了，一个这么简单的二分写了半天
+# 我sb了，写了一个二分，搞复杂了，简单的写法在下面
+
+#### 二分
 
 ```C++
 class Solution {
@@ -77,6 +79,37 @@ public:
             else
             {
                 r = m - 1;
+            }
+        }
+        return ans;
+    }
+};
+```
+
+#### 滑动窗口
+
+```C++
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int ans = 0;
+        int l = 0, r = 0;
+        int ch[128];
+        int len = s.length();
+        for(int i = 0; i < 128; i++)
+            ch[i] = 0;
+        while(r < len)
+        {
+            if(!ch[s[r]])
+            {
+                ans = max(ans, r-l+1);
+                ch[s[r]]++;
+                r++;
+            }
+            else
+            {
+                ch[s[l]]--;
+                l++;
             }
         }
         return ans;
