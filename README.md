@@ -15,3 +15,5 @@
 [洛谷](https://www.luogu.com.cn/ "https://www.luogu.com.cn/")
 
 [PTA](https://pintia.cn/problem-sets/dashboard "https://pintia.cn/problem-sets/dashboard")
+
+[LeetCode中国](https://leetcode.cn/ "https://leetcode.cn/")
