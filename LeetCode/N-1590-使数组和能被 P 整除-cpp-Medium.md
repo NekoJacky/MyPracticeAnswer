@@ -56,7 +56,7 @@ public:
         unordered_map<int, int> index;
         int y = 0, res = nums.size();
         for (int i = 0; i < nums.size(); i++) {
-            index[y] = i; // f[i] mod p = y，因此哈希表记录 y 对应的下标为 i
+            index[y] = i;
             y = (y + nums[i]) % p;
             if (index.count((y - x + p) % p) > 0) {
                 res = min(res, i - index[(y - x + p) % p] + 1);
