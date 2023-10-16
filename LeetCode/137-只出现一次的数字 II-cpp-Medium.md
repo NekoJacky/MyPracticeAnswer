@@ -21,8 +21,7 @@
 - `-231 <= nums[i] <= 231 - 1`
 - `nums 中，除某个元素仅出现 一次 外，其余每个元素都恰出现 三次`
 
-cpp
-`
+```cpp
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
@@ -38,4 +37,4 @@ public:
         return 0;
     }
 };
-`
+```
